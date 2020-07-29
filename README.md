@@ -31,7 +31,7 @@ Subsets : https://leetcode.com/problems/subsets/
 
 The corresponding functions are called in leetcode.py
 
-Changes.txt marks the variable changes in format of (prev value , new value , line of change,  file_no)
+Changes.txt marks the variable changes in format of (prev value , new value , line of change,  file_name)
 
 
 
