@@ -1,33 +1,36 @@
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-# Definition for singly-linked list.
+    def __str__(self):
+        s = str(self.val)
+        if self.left:
+            s = str(self.left) + " "+s
+        if self.right:
+            s += " " + str(self.right)
+        return s
+    def __repr__(self):
+        return self.__str__()
+    def __eq__(self,other):
+        return self.__str__() == other.__str__()
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
         self.prev = None
-
-
-# def inorderTraversal1(self, root):
-#     res = []
-#     self.helper(root, res)
-#     return res
-    
-# def helper(self, root, res):
-#     if root:
-#         self.helper(root.left, res)
-#         res.append(root.val)
-#         self.helper(root.right, res)
- 
-# iteratively
+    def __str__(self):
+        if not self.next: return str(self.val)
+        else: return str(self.val) + " " + str(self.next)
+    def __repr__(self):
+        return self.__str__()
+    def __eq__(self,other):
+        return self.__str__() == other.__str__()
 
 def inorderTraversal(root):
     head = root # watchvar btree:left:right:val head
     res, stack = [], [] # watchvar ref:head:btree root
+    node = None # watchvar ref:head:btree node
     while True:
         while root: 
             stack.append(root)
@@ -37,15 +40,15 @@ def inorderTraversal(root):
         node = stack.pop()
         res.append(node.val)
         root = node.right
-def dfs(nums, path, res):
+def dfs1(nums, path, res):
     if not nums:
         res.append(path)
         # return # backtracking
     for i in range(len(nums)):
-        dfs(nums[:i]+nums[i+1:], path+[nums[i]], res)
+        dfs1(nums[:i]+nums[i+1:], path+[nums[i]], res)
 def permute(nums):
-    res = []
-    dfs(nums, [], res)
+    res = [] # watchvar res
+    dfs1(nums, [], res)
     return res
     
 def productExceptSelf(arr):
@@ -171,7 +174,7 @@ def lengthOfLongestSubstring(s):
 
 # DFS recursively 
 def subsets1(nums):
-    res = []
+    res = [] # watchvar res
     dfs(sorted(nums), 0, [], res)
     return res
     
@@ -200,7 +203,7 @@ def subsets(nums):
     return res
 
 def removeNthFromEnd(head, n):
-    mainhead = head # watchvar btree:prev:next:val mainhead
+    mainhead = head # # watchvar btree:prev:next:val mainhead
     fast = head # watchvar ref:mainhead:btree fast
     slow = head # watchvar ref:mainhead:btree slow
     for _ in range(n):
@@ -239,7 +242,7 @@ def go():
     # d = TreeNode(2)
     # a.left = b
     # b.right = d
-    # a.right = b
+    # a.right = c
     # kthSmallest(a,1)
 
     # https://leetcode.com/problems/odd-even-linked-list/
@@ -268,20 +271,21 @@ def go():
     # addTwoNumbers(a,b)
 
     # https://leetcode.com/problems/generate-parentheses/
+
     # generateParenthesis(3)
     # https://leetcode.com/problems/longest-palindromic-substring/
     # lengthOfLongestSubstring("abcabcbb")
 
     # https://leetcode.com/problems/subsets/
-    # subsets1([1,2,3])
+    subsets1([1,2,3])
 
     #https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-    a = ListNode(1)
-    b= ListNode(2)
-    c = ListNode(3)
-    d = ListNode(4)
-    a.next = b
-    b.next = c
-    c.next = d
-    removeNthFromEnd(a,2)
+    # a = ListNode(1)
+    # b= ListNode(2)
+    # c = ListNode(3)
+    # d = ListNode(4)
+    # a.next = b
+    # b.next = c
+    # c.next = d
+    # removeNthFromEnd(a,2)
 
