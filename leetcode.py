@@ -199,6 +199,7 @@ def subsets(nums):
         res += [item+[num] for item in res]
     return res
 def go():
+    # https://leetcode.com/problems/binary-tree-inorder-traversal/
     # a = TreeNode(1)
     # b = TreeNode(2)
     # c = TreeNode(3)
@@ -208,10 +209,16 @@ def go():
     # b.right = d
     # ans= inorderTraversal(a)
 
-
+    # https://leetcode.com/problems/permutations/
     # nums = [1,2,3]
     # permute(nums)
-    # return productExceptSelf([1,2,3,4])
+
+
+    # https://leetcode.com/problems/product-of-array-except-self/
+    # productExceptSelf([1,2,3,4])
+
+
+    # https://leetcode.com/problems/kth-smallest-element-in-a-bst/
     # a = TreeNode(3)
     # b = TreeNode(1)
     # c = TreeNode(4)
@@ -221,6 +228,7 @@ def go():
     # a.right = b
     # kthSmallest(a,1)
 
+    # https://leetcode.com/problems/odd-even-linked-list/
     # a = ListNode(1)
     # b= ListNode(2)
     # c = ListNode(3)
@@ -230,19 +238,26 @@ def go():
     # c.next = d
     # oddEvenList(a)
 
+    # https://leetcode.com/problems/longest-palindromic-substring/
     # longestpalindromicsubstring("babad")
+
+    # https://leetcode.com/problems/container-with-most-water/
     # maxArea([1,8,6,2,5,4,8,3,7])
 
+    # https://leetcode.com/problems/add-two-numbers/
     # a = ListNode(1)
     # b= ListNode(2)
     # c = ListNode(3)
     # d = ListNode(4)
     # a.next = b
-    # # b.next = c
     # c.next = d
-
     # addTwoNumbers(a,b)
+
+    # https://leetcode.com/problems/generate-parentheses/
     # generateParenthesis(3)
+    # https://leetcode.com/problems/longest-palindromic-substring/
     # lengthOfLongestSubstring("abcabcbb")
-    subsets1([1,2,3])
+
+    # https://leetcode.com/problems/subsets/
+    # subsets1([1,2,3])
 
