@@ -227,8 +227,8 @@ def go():
     # ans= inorderTraversal(a)
 
     # https://leetcode.com/problems/permutations/
-    # nums = [1,2,3]
-    # permute(nums)
+    nums = [1,2,3]
+    permute(nums)
 
 
     # https://leetcode.com/problems/product-of-array-except-self/
@@ -277,7 +277,7 @@ def go():
     # lengthOfLongestSubstring("abcabcbb")
 
     # https://leetcode.com/problems/subsets/
-    subsets1([1,2,3])
+    # subsets1([1,2,3])
 
     #https://leetcode.com/problems/remove-nth-node-from-end-of-list/
     # a = ListNode(1)
