@@ -200,7 +200,7 @@ def subsets(nums):
     return res
 
 def removeNthFromEnd(head, n):
-    mainhead = head # # watchvar btree:prev:next:val mainhead
+    mainhead = head # watchvar btree:prev:next:val mainhead
     fast = head # watchvar ref:mainhead:btree fast
     slow = head # watchvar ref:mainhead:btree slow
     for _ in range(n):
